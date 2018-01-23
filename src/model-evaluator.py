@@ -6,6 +6,8 @@ import numpy as np
 import itertools
 
 def reform_literal(literal, action_args, reformulation):
+    if not reformulation:
+        return literal.key
     literal_name = literal.predicate
     params = [action_args[reformulation[action_args.index(arg)]-1] for arg in literal.args]
 

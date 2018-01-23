@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 
-PROJECT_PATH = "/anonsub/observations-learning/"
+PROJECT_PATH = "~/anonsub/observations-learning/"
 
 PLANNER_PATH = PROJECT_PATH + "/util/madagascar"
 PLANNER_NAME = "M"

@@ -463,7 +463,6 @@ fdomain.close()
 
 # Solving the compilation
 cmd = "rm " + config.OUTPUT_FILENAME + " planner_out.log;" + config.PLANNER_PATH + "/" + config.PLANNER_NAME + " aux_domain.pddl aux_problem.pddl -F " + str(len(plans) + sum([len(p) for p in plans])) + " " + config.PLANNER_PARAMS + " > planner_out.log"
-print("\n\nExecuting... " + cmd)
 os.system(cmd)
 
 # Reading the plan output by the compilation
@@ -496,6 +495,6 @@ mean = worst_case/2
 p = float(worst_case-num_modifications)/worst_case
 print("Modifications: {}".format(num_modifications))
 print("Worst case modifications: {}".format(worst_case))
-print("P(M|O) = {}".format(round(p, 2)))
+print("P(O|M) = {}".format(round(p, 2)))
 # print("P(M|O) = {}".format())
 sys.exit(0)
